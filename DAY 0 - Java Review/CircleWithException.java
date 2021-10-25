@@ -18,11 +18,11 @@ public class CircleWithException {
         return radius;
     }
 
-    public void setRadius(double radius)throws IOException {
+    public void setRadius(double radius)throws IllegalArgumentException {
         if (radius >=0)
             this.radius = radius;
         else
-            throw new IOException("Radius cannot be negative");
+            throw new IllegalArgumentException("Radius cannot be negative");
     }
 
     public static int getNumberOfObjects() {
